@@ -19,8 +19,16 @@ linux系统常用apt(Advanced Package Tool)高级软件工具来安装软件
               sudo apt-get upgrade       更新已安装软件。
               sudo apt-get remove xxx   删除软件。
 	      
+sudo是增加用户权限，在命令行前面添加sudo相当于以root用户运行这条命令。可以运行sudo su直接切换到root用户操作。我个人喜欢在普通用户登陆。"$"为普通用户，"#"为超级用户。
+	pi@raspberrypi ~ $ sudo su
+	root@raspberrypi:/home/pi# su pi
+	pi@raspberrypi ~ $
+          
 首先删除默认vi编辑器
 `sudo apt-get remove vim-common`
+
+然后重装vim
+sudo apt-get install vim
 
 通常VIM配色方案文件存放在“/usr/share/vim/vim74/colors” ，具体位置可能略有差异。 
 比如我的该目录下的内容为：（其中“.vim”就是配色方案）
@@ -28,7 +36,7 @@ linux系统常用apt(Advanced Package Tool)高级软件工具来安装软件
 blue.vim      default.vim  `desert.vim`   evening.vim   koehler.vim  morning.vim  pablo.vim      README.txt  shine.vim  torte.vim
 darkblue.vim  delek.vim    elflord.vim  industry.vim  murphy.vim   peachpuff.vim  ron.vim     slate.vim  zellner.vim
 
-在用户/etc/vim/目录下，新建“vimrc”文件，内容如下：
+在用户/etc/vim/vimrc目录下的“vimrc”文件，内容如下：
 
 ```
 #语法高亮
