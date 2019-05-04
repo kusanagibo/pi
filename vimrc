@@ -1,3 +1,24 @@
+查看操作系统版本
+cat /proc/version
+
+查看主板版本
+cat /proc/cpuinfo
+
+查看SD存储卡剩余空间
+df -h
+
+查看ip地址
+ifconfig
+
+压缩：tar –zcvf  filename.tar.gz dirname
+解压：tar –zxvf filename.tar.gz
+
+linux系统常用apt(Advanced Package Tool)高级软件工具来安装软件
+              sudo apt-get install xxx     安装软件。
+              sudo apt-get update         更新软件列表。
+              sudo apt-get upgrade       更新已安装软件。
+              sudo apt-get remove xxx   删除软件。
+	      
 首先删除默认vi编辑器
 `sudo apt-get remove vim-common`
 
@@ -29,7 +50,7 @@ set nu
 # ts用于设置tab键表示的空格数
 set ts=4
 # colorscheme用于选择配色方案 
-colorscheme molokai
+colorscheme desert
 ```
 
 vi有3个模式：插入模式、命令模式、低行模式。
