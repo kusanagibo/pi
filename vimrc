@@ -26,6 +26,11 @@ sudo是增加用户权限，在命令行前面添加sudo相当于以root用户�
           
 首先删除默认vi编辑器
 `sudo apt-get remove vim-common`
+or
+sudo apt-get --purge remove <package>
+
+Uninstalled a lot of software you can check/delete orphans with 
+sudo apt-get autoremove --purge
 
 然后重装vim
 sudo apt-get install vim
